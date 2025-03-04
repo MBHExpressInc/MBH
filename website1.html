@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MBH Express - Professional Trucking and Freight Services">
+    <!-- SEO Optimization -->
+    <meta property="og:title" content="MBH Express - Reliable Trucking Solutions">
+    <meta property="og:description" content="24/7 Transportation Services Across North America">
+    <title>MBH Express - Reliable Trucking Solutions</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessible Header -->
+    <header aria-label="Main navigation">
+        <nav class="container">
+            <div class="logo">
+                <img src="HBM Express PNG.png" alt="MBH Express Logo" width="200" height="50">
+            </div>
+            <button class="menu-toggle" aria-expanded="false" aria-label="Mobile menu">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#join-team">Careers</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Lazy Loading -->
+    <section class="hero" id="home" aria-label="Main banner">
+        <div class="hero-content">
+            <h1>Professional Freight Services</h1>
+            <p class="lead">24/7 Transportation Solutions Across North America</p>
+            <a href="#contact" class="btn-primary">Get Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container" id="services" aria-label="Our services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <article class="service-card">
+                <i class="fas fa-truck fa-3x"></i>
+                <h3>Dry Van Shipping</h3>
+                <p>Secure general freight transportation with temperature-controlled options</p>
+            </article>
+            <article class="service-card">
+                <i class="fas fa-snowflake fa-3x"></i>
+                <h3>Refrigerated Transport</h3>
+                <p>Temperature-controlled logistics for perishable goods</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="careers container" id="join-team" aria-label="Career opportunities">
+        <h2 class="section-title">Join Our Team</h2>
+        <div class="careers-grid">
+            <div class="career-benefits">
+                <h3>Why Choose MBH Express?</h3>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> Competitive pay & benefits</li>
+                    <li><i class="fas fa-check-circle"></i> Modern fleet maintenance</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 driver support</li>
+                </ul>
+            </div>
+            <div class="cta-box">
+                <a href="https://intelliapp.driverapponline.com/c/mbhexpressinc" 
+                   class="btn-primary" 
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Apply Now <i class="fas fa-external-link-alt"></i>
+                </a>
+                <p class="disclaimer">Opens in new window</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact container" id="contact" aria-label="Contact information">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 7895 Broadway, Suite G Room D<br>
+                    Merrillville, IN 46410<br>USA</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+12192002109">219-200-2109</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:safety@mbhexpress.com">safety@mbhexpress.com</a></p>
+                </address>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> MBH Express. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- JavaScript Enhancements -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
